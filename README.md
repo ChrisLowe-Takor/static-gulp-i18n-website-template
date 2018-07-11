@@ -9,8 +9,10 @@ This is a gulp script for a static website. It:
 
 ## Getting started
 
-`npm install --save gulp`
+`npm install -g gulp`
+
 `npm install`
+
 `gulp`
 
 This will host the english version locally and keep the browser synced with changes made to the html, css, js, translation files and images
@@ -18,6 +20,7 @@ This will host the english version locally and keep the browser synced with chan
 Alternatively, you can host one of the translations with:
 
 `gulp sync-zh`
+
 `gulp sync-pseduo`
 
 ## Project structure

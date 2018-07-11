@@ -11,15 +11,15 @@ var cache = require('gulp-cache');
 var reload      = browserSync.reload;
 
 
-gulp.task('clean', function() {
-  del(['build/*'])
-});
-
 var buildDirs = [
    'build/en/',
    'build/zh/',
    'build/pseudo/'
 ];
+
+gulp.task('clean', function() {
+  del(['build/*'])
+});
 
 gulp.task("build-css", function() {
    var pipeline = gulp.src("src/styles/*.css");
@@ -116,6 +116,18 @@ gulp.task('sync-zh', ['translate', 'build-css', 'build-js', 'build-img'], functi
    gulp.watch("src/img/*", ["watch-img"]);
 });
 
+gulp.task('sync-pseudo', ['translate', 'build-css', 'build-js', 'build-img'], function() {
+   browserSync.init({
+      server: {
+         baseDir: "build/pseudo"
+      }
+   });
 
+   gulp.watch("locale/*/**", ["watch-html"]);
+   gulp.watch("src/*.html", ["watch-html"]);
+   gulp.watch("src/styles/*.css", ["watch-css"]);
+   gulp.watch("src/js/*.js", ["watch-js"]);
+   gulp.watch("src/img/*", ["watch-img"]);
+});
 
-
+gulp.task('default', ['sync-en']);

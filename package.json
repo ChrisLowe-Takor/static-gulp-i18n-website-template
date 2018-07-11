@@ -1,13 +1,14 @@
 {
-  "name": "soar-website-gulp",
+  "name": "static-gulp-i18n-website-template",
   "version": "1.0.0",
-  "description": "",
+  "description": "A static bootstrap website template that covers i18n and minification",
+  "keywords": ["html", "responsive", "i18n", "template", "gulp"],
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Chris Lowe",
+  "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.24.5",
     "del": "^3.0.0",

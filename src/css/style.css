@@ -1,0 +1,12 @@
+body {
+	margin-top: 40px;
+}
+
+img.nav-logo {
+    height: 48px;
+    margin-right: 80px;
+}
+
+h1 {
+	font-size: 3rem;
+}
